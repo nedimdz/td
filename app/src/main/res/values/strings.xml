@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyTodoList</string>
+    <string name="dialog_title">Add a new task</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_cancel">Cancle</string>
+    <string name="add_task_hint">Add a todo task</string>
+</resources>
