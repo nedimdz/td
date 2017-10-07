@@ -8,7 +8,7 @@ import android.provider.BaseColumns;
  */
 
 public class TodoListContract {
-    public static final String CONTENT_AUTORITY = "com.example.mytodolist";
+    public static final String CONTENT_AUTORITY = "com.example.mytodolist.provider";
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTORITY);
     public static final String PATH_TODO = "todo";
 
