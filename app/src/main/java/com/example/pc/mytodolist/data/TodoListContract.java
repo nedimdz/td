@@ -11,12 +11,15 @@ public class TodoListContract {
     public static final String CONTENT_AUTORITY = "com.example.mytodolist.provider";
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTORITY);
     public static final String PATH_TODO = "todo";
+    public static final String QUERY_EQUAL = "=?";
 
     public static final class TodoEntry implements BaseColumns {
         public static final String  TABLE_NAME = "todo";
         public static final String COLUMN_DESCRIPTION = "description";
         public static final String COLUMN_DATE = "date";
         public static final String COLUMN_DONE = "done";
+        public static final String WHERE_TODO_ID= _ID + QUERY_EQUAL;
+
 
         public static final Uri CONTENT_URI = BASE_CONTENT_URI.buildUpon().appendPath(PATH_TODO).build();
         public static final String CONTENT_TYPE = "vnd.android.cursor.dir/" + CONTENT_AUTORITY + "/" + PATH_TODO;

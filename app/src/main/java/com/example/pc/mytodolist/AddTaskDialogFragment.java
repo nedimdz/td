@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
+import android.widget.EditText;
 
 import com.example.pc.mytodolist.service.TodoListService;
 
@@ -35,8 +36,9 @@ public class AddTaskDialogFragment extends DialogFragment {
         builder.setPositiveButton(R.string.btn_add, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                String task = ((EditText)getDialog().findViewById(R.id.et_add_task)).getText().toString();
                 Intent intent = new Intent(getContext(), TodoListService.class);
-                intent.putExtra(TodoListService.EXTRA_TASK_DESCRIPTION, "");
+                intent.putExtra(TodoListService.EXTRA_TASK_DESCRIPTION, task);
                 getActivity().startService(intent);
             }
         });
